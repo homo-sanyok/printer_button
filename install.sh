@@ -1,3 +1,6 @@
+sudo rm -r /home/klipper/poweroff_btn
+sudo rm -r /home/klipper/usb_mount
+sudo rm -r /etc/systemd/system/usb-mount.service
 sudo apt update
 sudo apt install python3 python3-pip usbmount -y
 sudo pip3 install OPi.GPIO requests
