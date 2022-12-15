@@ -8,6 +8,13 @@
     * GND
 
 ### Инструкция по установке
+1. Скачайте скрипт
 ```
-ok
+cd /home/klipper
+git clone https://github.com/homo-sanyok/printer_button.git
+```
+2. Перейдите в папку со скриптом и запустите установку
+```
+cd printer_button
+sudo ./install.sh
 ```
