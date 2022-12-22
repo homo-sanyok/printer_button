@@ -13,3 +13,5 @@ sudo systemctl start printer_button_lastfile.service
 sudo cp /home/klipper/printer_button/services/10-local.rules /etc/udev/rules.d/
 sudo service udev reload
 sudo service udev restart
+mv /home/klipper/moonraker/.git /home/klipper/moonraker/.git_
+mv /home/klipper/moonraker/.github /home/klipper/moonraker/.github_
