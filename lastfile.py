@@ -16,13 +16,17 @@ def read_file(last_file):
     except:
         read_file(last_file)
 
-last_file = requests.get(URL + '/printer/objects/query?print_stats').json()['result']['status']['print_stats']['filename']
+try:
+    last_file = requests.get(URL + 
+'/printer/objects/query?print_stats').json()['result']['status']['print_stats']['filename']
 
-while read_file(last_file) or last_file == '':
-    last_file = requests.get(URL + '/printer/objects/query?print_stats').json()['result']['status']['print_stats']['filename']
+    while read_file(last_file) or last_file == '':
+        last_file = requests.get(URL + 
+'/printer/objects/query?print_stats').json()['result']['status']['print_stats']['filename']
 
-with open('/home/klipper/printer_button/lastfile.txt', 'w') as out:
-    out.write(last_file)
-    out.close()
+    with open('/home/klipper/printer_button/lastfile.txt', 'w') as out:
+        out.write(last_file)
+        out.close()
 
-time.sleep(20)
+    time.sleep(20)
+except: ...
